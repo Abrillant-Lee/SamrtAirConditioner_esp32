@@ -17,6 +17,10 @@
 
 #include "mqtt.h"
 
+<<<<<<< HEAD
+=======
+#include <DHT.h>
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82
 
 /*MQTT连接配置*/
 /*-----------------------------------------------------*/
@@ -81,6 +85,10 @@ void initMQTTClient()
         }
         else
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82
             Serial.print("连接失败");
             Serial.print(client.state());
             delay(6000);
@@ -236,7 +244,11 @@ bool publishResponse(const char *topic, const char *response)
  * @param topic 接收到消息的主题。
  * @param payload 接收到消息的有效载荷。
  * @param length 有效载荷的长度。
+<<<<<<< HEAD
  */
+=======
+//  */
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82
 // void mqttMessageCallback(char *topic, byte *payload, unsigned int length)
 // {
 //     {
@@ -316,6 +328,7 @@ bool publishResponse(const char *topic, const char *response)
 //     }
 // }
 
+<<<<<<< HEAD
 // /**
 //  * Executes a LED control command based on the provided parameters.
 //  * 根据提供的参数执行 LED 控制命令。
@@ -323,6 +336,15 @@ bool publishResponse(const char *topic, const char *response)
 //  * @param paras The JsonObject containing the command parameters.
 //  *              包含命令参数的 JsonObject 对象。
 //  */
+=======
+/**
+ * Executes a LED control command based on the provided parameters.
+ * 根据提供的参数执行 LED 控制命令。
+ *
+ * @param paras The JsonObject containing the command parameters.
+ *              包含命令参数的 JsonObject 对象。
+ */
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82
 // void executeLedControlCommand(const JsonObject &paras)
 // {
 //     Led led(48);
@@ -341,6 +363,7 @@ bool publishResponse(const char *topic, const char *response)
 //     }
 // }
 
+<<<<<<< HEAD
 // // void executeDht11ControlCommand(const JsonObject &paras)
 // // {
 // //     int value = paras["value"]; // 从"paras"字段中获取"value"字段，将其解析为一个整数
@@ -368,6 +391,35 @@ bool publishResponse(const char *topic, const char *response)
 // //         dht11_ctr = 0;
 // //     }
 // // }
+=======
+// void executeDht11ControlCommand(const JsonObject &paras)
+// {
+//     int value = paras["value"]; // 从"paras"字段中获取"value"字段，将其解析为一个整数
+//     if (value)
+//     {
+//         dht11_ctr = 1;
+
+//         // 开始采集数据
+//         DHT dht(2, DHT11);
+//         dht.begin();
+
+//         const char *properties[] = {"temperature", "humidity"};
+
+//         // 当dht11_ctr为1时，持续采集数据并上报
+//         while (dht11_ctr)
+//         {
+//             int values[] = {dht.readHumidity(), dht.readTemperature()}; // 调用相应的函数来获取温度和湿度的值
+//             reportDeviceValues("esp32", properties, values, 2);
+//             delay(2000);
+//         }
+//     }
+//     else
+//     {
+//         // 停止采集数据
+//         dht11_ctr = 0;
+//     }
+// }
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82
 // void executeDht11ControlCommand(const JsonObject &paras)
 // {
 //     int value = paras["value"]; // 从"paras"字段中获取"value"字段，将其解析为一个整数
@@ -435,8 +487,13 @@ bool publishResponse(const char *topic, const char *response)
 // }
 
 
+<<<<<<< HEAD
 // void executeServoControlCommand(const JsonObject &paras)
 // {
+=======
+void executeServoControlCommand(const JsonObject &paras)
+{
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82
 
 
 
@@ -445,4 +502,8 @@ bool publishResponse(const char *topic, const char *response)
 
 
 
+<<<<<<< HEAD
 // }
+=======
+}
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82

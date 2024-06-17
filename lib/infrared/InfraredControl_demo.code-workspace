@@ -33,9 +33,13 @@
 			"wifi_connect.h": "c",
 			"stdlib.h": "c",
 			"sg90_servo.h": "c",
+<<<<<<< HEAD
 			"hi_uart.h": "c",
 			"atomic": "cpp",
 			"cstdint": "cpp"
+=======
+			"hi_uart.h": "c"
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82
 		}
 	}
 }

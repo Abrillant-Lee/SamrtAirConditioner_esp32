@@ -41,7 +41,11 @@ void initMQTTClient();
 void subscribeToCommandTopic();
 
 // 当收到MQTT消息时的回调函数，参数包括主题、负载和负载长度
+<<<<<<< HEAD
 void mqttMessageCallback(char *topic, byte *payload, unsigned int length);
+=======
+// void mqttMessageCallback(char *topic, byte *payload, unsigned int length);
+>>>>>>> 41f29ad54a3d38ddb6f612b3a3129fa5fffb5e82
 
 // 发送MQTT消息，参数包括主题和消息内容
 void sendMQTTMessage(const char *topic, const char *message);
